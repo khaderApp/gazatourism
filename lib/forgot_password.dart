@@ -20,7 +20,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           Column(
 
             children: [
-              Text('  ForgotPassword '),
+              Text('  ForgotPassword w '),
             ],
           ),
         ],
