@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:gazatourism/login.dart';
 
+import 'drawer/my_darwer.dart';
+
 
 class Register extends StatefulWidget {
 
@@ -15,6 +17,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: ListView(
         children: [
           Column(
