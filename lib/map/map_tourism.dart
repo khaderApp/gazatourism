@@ -1,8 +1,10 @@
 
-import 'package:flutter/cupertino.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:gazatourism/drawer/my_darwer.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+import '../sors_material/src_tourism.dart';
 
 class GoogleMapT extends StatefulWidget {
 
@@ -12,6 +14,15 @@ class GoogleMapT extends StatefulWidget {
 }
 
 class _GoogleMapTState extends State<GoogleMapT> {
+   Completer<GoogleMapController> _completer= Completer();
+   List<Marker>? mapMarker;
+   @override
+  void initState() {
+
+     mapMarker = SRCM.getLatLng();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,9 +35,15 @@ class _GoogleMapTState extends State<GoogleMapT> {
         
         children: [
           GoogleMap(
+            myLocationButtonEnabled: true,
+            myLocationEnabled: true ,
             initialCameraPosition: CameraPosition(
                 target:LatLng(31.513651,34.455891),
                 zoom: 10 ),
+            onMapCreated: (GoogleMapController controller){
+              _completer.complete(controller);
+            },
+              markers:mapMarker!.map((e) => e).toSet() ,
           ),
           Container(
 

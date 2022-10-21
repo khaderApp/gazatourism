@@ -1,5 +1,5 @@
 
-
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 class SRCM {
 
 
@@ -89,5 +89,37 @@ class SRCM {
 
 
  ];
+
+ static List<LatLng> latlng = [
+     LatLng(31.5042881793896, 34.46428905826307),
+     LatLng(31.50548280534199,34.46588064829529),
+     LatLng(31.512251720408887, 34.48202099079834),
+     LatLng(31.503648326330353, 34.46401637262038),
+     LatLng(31.52141585439749, 34.44250723446138),
+     LatLng(15.60720948410676, 32.536968689496675),
+ ];
+
+
+ static List<Marker> getLatLng() {
+
+ List<Marker> myMarker= [] ;
+
+   for(int i= 0;i <latlng.length-1;i++){
+     myMarker.add( Marker(
+          markerId: MarkerId('${name[i]}'),
+          position: latlng[i],
+          infoWindow: InfoWindow( title: "${name[i]}",
+          snippet: "${shortDes[i]}",)  ,
+          icon: BitmapDescriptor.defaultMarkerWithHue(
+            BitmapDescriptor.hueRed )
+
+                )
+          );
+
+  }
+
+ return myMarker;
+ }
+
 
 }
