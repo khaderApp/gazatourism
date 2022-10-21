@@ -27,7 +27,7 @@ class _RegisterState extends State<Register> {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage("images/Fotolia.png"),
+              image: AssetImage("assets/images/Fotolia.png"),
             ),
           ),
 
@@ -165,7 +165,7 @@ class _RegisterState extends State<Register> {
               Positioned(
                   top: 45,
                   right: 130,
-                  child: Image.asset("images/logo.png") ),
+                  child: Image.asset("assets/images/logo.png") ),
 
             ],
 

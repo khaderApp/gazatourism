@@ -35,14 +35,14 @@ class _MySeplashState extends State<MySeplash> {
         width: double.infinity,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image:AssetImage("images/BG.png",),fit: BoxFit.cover
+                image:AssetImage("assets/images/BG.png",),fit: BoxFit.cover
             ),
         ),
         child:Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("images/logo.png",height: 200,width: 200,),
+                  Image.asset("assets/images/logo.png",height: 200,width: 200,),
                   CircularProgressIndicator(backgroundColor: Colors.green,)
 
 

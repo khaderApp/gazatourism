@@ -1,10 +1,9 @@
 
-import 'package:flutter/cupertino.dart';
-import 'package:gazatourism/home_page.dart';
+
+import 'package:gazatourism/in_app/home_page.dart';
 import 'package:gazatourism/main.dart';
 import 'package:flutter/material.dart';
 import 'package:gazatourism/register.dart';
-
 import 'drawer/my_darwer.dart';
 import 'forgot_password.dart';
 
@@ -29,7 +28,7 @@ class _LoginState extends State<Login> {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage("images/Fotolia.png"),
+              image: AssetImage("assets/images/Fotolia.png"),
             ),
           ),
 
@@ -205,7 +204,7 @@ class _LoginState extends State<Login> {
               Positioned(
                   top: 45,
                   right: 130,
-                  child: Image.asset("images/logo.png") ),
+                  child: Image.asset("assets/images/logo.png"), ),
 
             ],
 

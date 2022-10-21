@@ -24,7 +24,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
           decoration: BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
-              image: AssetImage("images/Fotolia.png"),
+              image: AssetImage("assets/images/Fotolia.png"),
             ),
           ),
 
@@ -125,7 +125,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               Positioned(
                   top: 70,
                   right: 130,
-                  child: Image.asset("images/logo.png") ),
+                  child: Image.asset("assets/images/logo.png") ),
 
             ],
 
