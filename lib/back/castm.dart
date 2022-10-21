@@ -1,8 +1,9 @@
 
 
-import 'package:flutter/material.dart';
+import'package:flutter/material.dart';
 import 'package:gazatourism/sors_material/src_tourism.dart';
 import '../drawer/my_darwer.dart';
+import '../in_app/search.dart';
 
 
 class CastmArea extends StatefulWidget {
@@ -20,7 +21,9 @@ class _CastmAreaState extends State<CastmArea> {
       appBar: AppBar(actions: [IconButton(
           splashRadius: 20,
           splashColor: Colors.amber,
-          onPressed: (){},
+          onPressed: (){
+            showSearch(context: context, delegate: Search() );
+          },
           icon: Icon(Icons.search,color: Colors.white,))],
         backgroundColor: Colors.black87,
         title: Text("tourism",

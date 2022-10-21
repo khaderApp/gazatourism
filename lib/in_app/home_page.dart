@@ -3,6 +3,7 @@ import 'package:gazatourism/back/castm.dart';
 import 'package:gazatourism/drawer/my_darwer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:gazatourism/sors_material/src_tourism.dart';
+import 'search.dart';
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
@@ -15,7 +16,9 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.black87,
         title: Text('Tourism'),
-        actions: [IconButton(onPressed: (){},
+        actions: [IconButton(onPressed: (){
+          showSearch(context: context, delegate: Search() );
+        },
             icon: Icon(Icons.search,color: Colors.white,)),],
         centerTitle: true,
       ),
